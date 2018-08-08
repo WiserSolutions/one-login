@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := default
 
 APP=one-login
-REPO=wisersolutions
+REPO=mobee
 VERSION="1.0.0"
 TAG=$(VERSION)
 VENDOR="com.wiser"
