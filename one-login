@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# one-login - simplifies using one-login to establish AWS CLI credentials
+#
+# one-login
+#
+
+# Update as required - resonable defaults provided
+REPO=wisersolutions
+IMAGE=${REPO}/one-login
+ONE_LOGIN_VERSION=${ONE_LOGIN_VERSION:-1.0.0}
+IMAGE_USER='app'
+WORKDIR='/app'
+
+VERSION=$ONE_LOGIN_VERSION
+
+AWS_PROFILE=${AWS_PROFILE:-saml}
+ONE_LOGIN_INI=${ONE_LOGIN_INI:-one-login.ini}
+
+VOLUMES="\
+    -v $HOME/.aws:/home/${IMAGE_USER}/.aws \
+    -v $HOME/.aws/${ONE_LOGIN_INI}:/one-login/settings.ini \
+"
+
+ENV=""
+
+# You get a dumb terminal if TERM is unset
+if [ ! "$TERM" == "dumb" ] && tty -s; then
+    IS_INTERACTIVE='-ti'
+fi
+
+# Run the command with appropriate environment, mounts and working directory
+docker run --rm -a stdout $IS_INTERACTIVE  $ENV $VOLUMES  -w $WORKDIR ${IMAGE}:${VERSION} "$@"
