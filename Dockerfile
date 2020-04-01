@@ -16,7 +16,7 @@ RUN apk -Uuv add \
     pip install --upgrade pip
 
 # Add the One Login SAML script
-RUN git clone https://github.com/idralyuk/samlapi_onelogin.git /one-login \
+RUN git clone https://github.com/WiserSolutions/samlapi_onelogin.git /one-login \
     && cd /one-login \
     && touch settings.ini \
     && pip install -r requirements.txt \

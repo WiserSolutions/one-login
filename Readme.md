@@ -11,7 +11,14 @@ This implementation wraps [idralyuk's](https://github.com/idralyuk/samlapi_onelo
 1. If docker isn't installed, go [here](https://docs.docker.com/install/)
 1. [Download](https://github.com/wisersolutions/one-login/releases) the one-login script and put it in your execution path
 1. Setup aws credentials file and add a blank profile in `~/.aws/credentials` for *saml* `[saml]`
-1. Copy the example `one-login.ini` to your `.aws` credentials directory and update with your `domain`, `api id` and `email`
+1. Copy the example `one-login.ini` to your `.aws` credentials directory and update the following information:
+
+* `onelogin_client_id`: Obtain from `OneLogin API Credentials` in LastPass
+* `onelogin_client_secret`: Obtain from `OneLogin API Credentials` in LastPass
+* `onelogin_appid`: Obtain from `OneLogin API Credentials` in LastPass
+* `Email`: Your wiser email address
+* `AccountNameId`: A comma separated list of mappings of account ID's to custom names (Example: mobee-test::153055050930,mobee-prod::042216585923)
+
 
 ## Running
 
