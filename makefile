@@ -2,7 +2,7 @@
 
 APP=one-login
 REPO=mobee
-VERSION="1.0.0"
+VERSION="1.1.0"
 TAG=$(VERSION)
 VENDOR="com.wiser"
 BUILD_DATE=$(shell date -u +%Y-%m-%dT%T%z)

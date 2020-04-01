@@ -8,7 +8,7 @@
 # Update as required - resonable defaults provided
 REPO=mobee
 IMAGE=${REPO}/one-login
-ONE_LOGIN_VERSION=${ONE_LOGIN_VERSION:-1.0.0}
+ONE_LOGIN_VERSION=${ONE_LOGIN_VERSION:-1.1.0}
 IMAGE_USER='app'
 WORKDIR='/app'
 
