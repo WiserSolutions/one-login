@@ -17,7 +17,7 @@ This implementation wraps [idralyuk's](https://github.com/idralyuk/samlapi_onelo
 * `onelogin_client_secret`: Obtain from `OneLogin API Credentials` in LastPass
 * `onelogin_appid`: Obtain from `OneLogin API Credentials` in LastPass
 * `Email`: Your wiser email address
-* `AccountNameId`: A comma separated list of mappings of account ID's to custom names (Example: mobee-test::153055050930,mobee-prod::042216585923)
+* `AccountNameId`: A comma separated list of mappings of account ID's to custom names (Example: my-acct-test::012345678901,my-acct-prod::234567890123)
 
 
 ## Running
